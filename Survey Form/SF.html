@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Survey Form</title>
+  <link rel="stylesheet" href="SF.css" />
+</head>
+<body>
+  <main>
+    <h1 id="title">Student Experience Survey</h1>
+    <p id="description">We'd love to hear your feedback to help us improve our learning environment.</p>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <label id="name-label" for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        placeholder="Enter your full name"
+      />
+
+      <!-- Email -->
+      <label id="email-label" for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="example@domain.com"
+      />
+
+      <!-- Age -->
+      <label id="number-label" for="number">Age</label>
+      <input
+        type="number"
+        id="number"
+        name="age"
+        min="13"
+        max="100"
+        placeholder="Enter your age"
+      />
+
+      <!-- Dropdown -->
+      <label for="dropdown">What best describes your current role?</label>
+      <select id="dropdown" name="role">
+        <option value="">Select one</option>
+        <option value="student">Student</option>
+        <option value="full-time">Full Time Job</option>
+        <option value="learner">Full Time Learner</option>
+        <option value="prefer-not">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Radio Buttons -->
+      <fieldset>
+        <legend>Would you recommend this course to a friend?</legend>
+        <label>
+          <input type="radio" name="recommend" value="definitely" />
+          Definitely
+        </label>
+        <label>
+          <input type="radio" name="recommend" value="maybe" />
+          Maybe
+        </label>
+        <label>
+          <input type="radio" name="recommend" value="not-sure" />
+          Not sure
+        </label>
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset>
+        <legend>What topics did you find most helpful? (Check all that apply)</legend>
+        <label><input type="checkbox" value="html" /> HTML</label>
+        <label><input type="checkbox" value="css" /> CSS</label>
+        <label><input type="checkbox" value="js" /> JavaScript</label>
+        <label><input type="checkbox" value="api" /> APIs</label>
+      </fieldset>
+
+      <!-- Textarea -->
+      <label for="comments">Any additional comments or suggestions?</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Write your thoughts here..."></textarea>
+
+      <!-- Submit -->
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
